@@ -1,8 +1,8 @@
 ---
-- name: Check if EPEL repo is already configured.
-  stat:
-    path: "{{ epel_repofile_path }}"
-  register: epel_repofile_result
+#- name: Check if EPEL repo is already configured.
+#  stat:
+#    path: "{{ epel_repofile_path }}"
+#  register: epel_repofile_result
 
 - name: Import EPEL GPG key.
   rpm_key:
