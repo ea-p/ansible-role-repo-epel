@@ -12,7 +12,7 @@
   until: result is succeeded
   retries: 5
   delay: 10
-  when: not epel_repofile_result.stat.exists
+#  when: not epel_repofile_result.stat.exists
   ignore_errors: "{{ ansible_check_mode }}"
 
 - name: Install EPEL repo.
@@ -23,7 +23,7 @@
   until: result is succeeded
   retries: 5
   delay: 10
-  when: not epel_repofile_result.stat.exists
+#  when: not epel_repofile_result.stat.exists
 
 - name: Disable Main EPEL repo.
   ini_file:
